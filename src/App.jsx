@@ -9,6 +9,10 @@ const App = () => {
     setNum(num + 1);
   };
 
+  const onClickSwitchShowFlag = () => {
+    setFaceShowFlag(!faceShowFlag);
+  };
+
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは!</h1>
@@ -16,7 +20,7 @@ const App = () => {
       <ColorfulMessage color="pink">元気です</ColorfulMessage>
       <button onClick={onClickCountUp}>カウントアップ</button>
       <br />
-      <button>on/off</button>
+      <button onClick={onClickSwitchShowFlag}>on/off</button>
       <p>{num}</p>
       {faceShowFlag && <p>(*´ω｀)</p>}
     </>
